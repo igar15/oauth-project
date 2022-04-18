@@ -1,4 +1,4 @@
-package ru.javaprojects.resourseserver.web.model;
+package ru.javaprojects.resourseserver.model;
 
 public class User {
     private String firstName;

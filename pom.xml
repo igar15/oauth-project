@@ -10,12 +10,13 @@
 		<module>photos-server</module>
 		<module>albums-server</module>
 		<module>eureka-server</module>
+		<module>photo-app-web-client</module>
 	</modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.3</version>
+		<version>2.6.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 

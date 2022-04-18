@@ -4,7 +4,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.javaprojects.albumsserver.web.model.Album;
+import ru.javaprojects.albumsserver.model.Album;
 
 import java.util.List;
 

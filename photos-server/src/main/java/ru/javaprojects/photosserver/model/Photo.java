@@ -1,4 +1,4 @@
-package ru.javaprojects.photosserver.web.model;
+package ru.javaprojects.photosserver.model;
 
 public class Photo {
     private String albumId;
