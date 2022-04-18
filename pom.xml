@@ -11,6 +11,7 @@
 		<module>albums-server</module>
 		<module>eureka-server</module>
 		<module>photo-app-web-client</module>
+		<module>social-login-web-client</module>
 	</modules>
 
 	<parent>
