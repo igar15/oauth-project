@@ -4,10 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.6</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>ru.javaprojects</groupId>
+        <artifactId>oauth-project</artifactId>
+        <version>1.0</version>
     </parent>
 
     <groupId>ru.javaprojects</groupId>

@@ -1,4 +1,4 @@
-package ru.javaprojects.resourseserver.web.security;
+package ru.javaprojects.usersserver.web.security;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.security.core.GrantedAuthority;

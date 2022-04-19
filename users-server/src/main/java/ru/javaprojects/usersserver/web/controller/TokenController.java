@@ -1,4 +1,4 @@
-package ru.javaprojects.resourseserver.web.controller;
+package ru.javaprojects.usersserver.web.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

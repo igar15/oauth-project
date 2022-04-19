@@ -1,4 +1,4 @@
-package ru.javaprojects.resourseserver.web.security;
+package ru.javaprojects.usersserver.web.security;
 
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -17,6 +17,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
         http
                 .authorizeRequests()
+                .antMatchers(HttpMethod.GET, "/users/*").permitAll()
                 .antMatchers(HttpMethod.GET, "/users/status/check")
 //                .hasAuthority("SCOPE_profile")
                 .hasRole("developer")

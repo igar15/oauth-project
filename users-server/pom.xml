@@ -10,10 +10,10 @@
     </parent>
 
     <groupId>ru.javaprojects</groupId>
-    <artifactId>resourse-server</artifactId>
+    <artifactId>users-server</artifactId>
     <version>1.0</version>
-    <name>resourse-server</name>
-    <description>Resourse Server</description>
+    <name>users-server</name>
+    <description>Users Server</description>
 
     <dependencies>
         <dependency>

@@ -1,10 +1,10 @@
-package ru.javaprojects.resourseserver;
+package ru.javaprojects.usersserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ResourseServerApplicationTests {
+class UsersServerApplicationTests {
 
     @Test
     void contextLoads() {
