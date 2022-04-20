@@ -1,5 +1,7 @@
 package ru.javaprojects.usersserver.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class User {
     private String firstName;
     private String lastName;
@@ -7,12 +9,16 @@ public class User {
     private String userName;
     private String userId;
 
-    public User(String firstName, String lastName, String email, String userName, String userId) {
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private String password;
+
+    public User(String firstName, String lastName, String email, String userName, String userId, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.userName = userName;
         this.userId = userId;
+        this.password = password;
     }
 
     public String getFirstName() {
@@ -53,5 +59,13 @@ public class User {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

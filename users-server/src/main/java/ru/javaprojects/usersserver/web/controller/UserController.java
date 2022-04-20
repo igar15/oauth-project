@@ -3,12 +3,12 @@ package ru.javaprojects.usersserver.web.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.http.MediaType;
-import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
 import ru.javaprojects.usersserver.model.User;
+import ru.javaprojects.usersserver.model.VerifyPasswordResponse;
 import ru.javaprojects.usersserver.web.service.UserService;
 
 @RestController
@@ -41,6 +41,16 @@ public class UserController {
 
     @GetMapping("/{email}")
     public User getUserByEmail(@PathVariable String email) {
-        return service.getUserByEmail(email);
+        return service.getUser(email);
+    }
+
+    @PostMapping("/{email}/verify-password")
+    public VerifyPasswordResponse verifyUserPassword(@PathVariable String email, @RequestBody String password) {
+        VerifyPasswordResponse response = new VerifyPasswordResponse(false);
+        User user = service.getUser(email, password);
+        if (user != null) {
+            response.setResult(true);
+        }
+        return response;
     }
 }

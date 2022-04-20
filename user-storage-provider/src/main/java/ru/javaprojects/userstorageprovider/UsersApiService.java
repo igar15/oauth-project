@@ -5,10 +5,14 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/users")
 @Consumes(MediaType.APPLICATION_JSON)
-//@Produces(MediaType.APPLICATION_JSON)
 public interface UsersApiService {
 
     @GET
-    @Path("/{username}")
-    User getUserDetails(@PathParam("username") String username);
+    @Path("/{email}")
+    User getUserDetails(@PathParam("email") String email);
+
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/{email}/verify-password")
+    VerifyPasswordResponse verifyPassword(@PathParam("email") String email, String password);
 }
